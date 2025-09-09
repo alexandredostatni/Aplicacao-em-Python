@@ -20,6 +20,7 @@ Credenciais AWS: Para o Terraform provisionar recursos em nuvem.
 
 Estrtura do repositório:
 
+devops-project/
 ├── app/                  # Código da aplicação Python
 │   ├── app.py            # Script principal da API Flask
 │   └── requirements.txt  # Dependências Python
@@ -28,10 +29,13 @@ Estrtura do repositório:
 │   ├── deployment.yaml   # Deployment da aplicação
 │   └── service.yaml      # Serviço para exposição externa
 ├── terraform/            # IaC com Terraform
-│   ├── main.tf           # Configurações principais (bucket S3, EKS)
+│   ├── main.tf           # Configurações principais (ex: bucket S3)
 │   └── variables.tf      # Variáveis de configuração
 ├── .github/workflows/    # Pipeline CI/CD
 │   └── ci-cd.yaml        # Workflow GitHub Actions
+├── monitoring/           # Configurações de monitoramento
+│   ├── prometheus.yaml   # Configuração básica do Prometheus
+│   └── grafana-dashboard.json  # Exemplo de dashboard JSON para importação
 └── README.md             # Esta documentação
 
 Metas do Projeto:
